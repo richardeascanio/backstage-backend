@@ -8,7 +8,9 @@ var statusSchema = new mongoose.Schema({
     Fecha: String,
     Lugar: String,
     Calificacion: Number,
-    Descripcion: String
+    Descripcion: String,
+    Precio: Number
+
 
 });
 
