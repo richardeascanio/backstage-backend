@@ -1,0 +1,23 @@
+{
+  "name": "api-rest-bs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev":"nodemon server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.4",
+    "node-restful": "^0.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
