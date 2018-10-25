@@ -11,7 +11,6 @@ var eventosSchema = new mongoose.Schema({
     Descripcion: String,
     Precio: Number
 
-
 });
 
 //retorno modelo
