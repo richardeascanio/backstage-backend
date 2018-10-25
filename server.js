@@ -18,5 +18,5 @@ app.use('/api', require('./routes/api'));
 
 //Inicio Servidor
 
-app.listen(2000);
-console.log('Servidor corrienndo en puerto 2000');
+server.listen(process.env.PORT || 3000);
+console.log('Servidor corrienndo en puerto ');
