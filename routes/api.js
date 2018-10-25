@@ -10,7 +10,7 @@ var Status = require('../models/eventos');
 //routes
 
 Status.methods(['get', 'post', 'put', 'delete']);
-Status.register(router, '/status');
+Status.register(router, '/eventos');
 
 //retorno router
 
