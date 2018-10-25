@@ -5,12 +5,12 @@ var router = express.Router();
 
 //modelos
 
-var Status = require('../models/eventos');
+var eventos = require('../models/eventos');
 
 //routes
 
-Status.methods(['get', 'post', 'put', 'delete']);
-Status.register(router, '/eventos');
+eventos.methods(['get', 'post', 'put', 'delete']);
+eventos.register(router, '/eventos');
 
 //retorno router
 

@@ -2,7 +2,7 @@
 var restful= require('node-restful');
 var mongoose = require('mongoose');
 
-var statusSchema = new mongoose.Schema({
+var eventosSchema = new mongoose.Schema({
     Name: String,
     Productor: String,
     Fecha: String,
