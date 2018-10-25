@@ -9,7 +9,7 @@ var eventos = require('../models/eventos');
 
 //routes
 
-eventos.methods(['GET', 'POST', 'PUT', 'DELETE']);
+eventos.methods(['get', 'post', 'put', 'delete']);
 eventos.register(router, '/eventos');
 
 //retorno router
