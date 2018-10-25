@@ -5,7 +5,7 @@ var router = express.Router();
 
 //modelos
 
-var Status = require('../models/status');
+var Status = require('../models/eventos');
 
 //routes
 

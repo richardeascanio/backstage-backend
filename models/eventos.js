@@ -16,4 +16,4 @@ var statusSchema = new mongoose.Schema({
 
 //retorno modelo
 
-module.exports = restful.model('Eventos', statusSchema);
+module.exports = restful.model('eventos', eventosSchema);
