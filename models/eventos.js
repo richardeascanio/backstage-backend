@@ -7,9 +7,10 @@ var eventosSchema = new mongoose.Schema({
     Productor: String,
     Fecha: String,
     Lugar: String,
-    Calificacion: Number,
+    Calificacion: String,
     Descripcion: String,
-    Precio: Number
+    Precio: String,
+    Categoria: String
 
 });
 
