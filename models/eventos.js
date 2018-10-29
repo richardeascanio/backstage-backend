@@ -10,8 +10,8 @@ var eventosSchema = new mongoose.Schema({
     Calificacion: String,
     Descripcion: String,
     Precio: String,
-    Categoria: String
-
+    Categoria: String,
+    
 });
 
 //retorno modelo
