@@ -2,19 +2,16 @@
 var restful= require('node-restful');
 var mongoose = require('mongoose');
 
-var eventosSchema = new mongoose.Schema({
+var localesSchema = new mongoose.Schema({
     Name: String,
-    Productor: String,
-    Fecha: String,
-    Lugar: String,
+    Direccion: String,
     Calificacion: String,
     Descripcion: String,
     Precio: String,
-    Categoria: String,
-    Imagen: String
+    Categoria: String
 
 });
 
 //retorno modelo
 
-module.exports = restful.model('eventos', eventosSchema);
+module.exports = restful.model('locales', localesSchema);
