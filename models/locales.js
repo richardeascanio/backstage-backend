@@ -8,8 +8,8 @@ var localesSchema = new mongoose.Schema({
     Calificacion: String,
     Descripcion: String,
     Precio: String,
-    Categoria: String
-
+    Categoria: String,
+    Imagen: String
 });
 
 //retorno modelo
