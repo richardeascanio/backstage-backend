@@ -3,6 +3,7 @@ var restful= require('node-restful');
 var mongoose = require('mongoose');
 
 var eventosSchema = new mongoose.Schema({
+    _id: String,
     Name: String,
     Productor: String,
     Fecha: String,
@@ -11,7 +12,8 @@ var eventosSchema = new mongoose.Schema({
     Descripcion: String,
     Precio: String,
     Categoria: String,
-    Imagen: String
+    Imagen: String,
+    Contador: String
 
 });
 
