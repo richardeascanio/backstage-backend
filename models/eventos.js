@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var eventosSchema = new mongoose.Schema({
-    _id: ObjectId,
+    _id: Schema.ObjectId,
     Name: String,
     Productor: String,
     Fecha: String,
