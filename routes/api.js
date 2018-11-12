@@ -17,11 +17,11 @@ var locales = require('../models/locales');
 
     eventos.get('eventos/:id',function(req,res){
         Evento.findById(req.params._id)
-        .then(doc => {
-            if(!doc){
+        .then(eventoEncontrado => {
+            if(!eventoEncontrado){
                 return res.status(404).end();
             }
-            return res.status(200).json(doc)
+            return res.status(200).json(eventoEncontrado)
         })
         .catch(err => next(err))
     })
