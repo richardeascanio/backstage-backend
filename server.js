@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
 
-var Evento = mongoose.model('./models/eventos', eventosSchema) 
+var Evento = mongoose.model('models/eventos', eventosSchema) 
 
 //express
 var app = express();
