@@ -44,6 +44,6 @@ app.get('/api/locales/:_id', function(req,res){
         if(!localFound){
             return res.status(404).end();
         }
-        return res.status(200).json(localFound);
+        return res.status(200).json(localFound)._id;
     }).catch(err => next(err));
 })
