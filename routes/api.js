@@ -20,8 +20,6 @@ var locales = require('../models/locales');
     locales.methods(['get', 'post', 'put', 'delete']);
     locales.register(router, '/locales');
     
-
-
 //retorno router
 
 module.exports= router;
