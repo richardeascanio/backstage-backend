@@ -13,13 +13,15 @@ var locales = require('../models/locales');
     //eventos
 
     eventos.methods(['get', 'post', 'put', 'delete']);
-    eventos.register(router, '/eventos'); 
+    eventos.register(router, '/eventos');
 
     //locales
 
     locales.methods(['get', 'post', 'put', 'delete']);
     locales.register(router, '/locales');
     
+
+
 //retorno router
 
 module.exports= router;

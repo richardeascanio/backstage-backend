@@ -1,7 +1,6 @@
 // dependencias
 var restful= require('node-restful');
 var mongoose = require('mongoose');
-var 
 
 var eventosSchema = new mongoose.Schema({
     _id: String,
