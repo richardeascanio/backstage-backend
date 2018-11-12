@@ -27,7 +27,7 @@ console.log('Servidor corrienndo en puerto ');
 
 //find by id
 
-app.get('api/eventos/:_id', function(req,res){
+app.get('/api/eventos/:_id', function(req,res){
 
     Evento.findById(req.params._id)
     .then(enventoFound =>{
