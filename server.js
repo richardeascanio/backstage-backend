@@ -29,12 +29,14 @@ console.log('Servidor corrienndo en puerto ');
 
 app.get('/api/eventos/:_id', function(req,res){
 
+    res.json(req.params)
+    /*
     Evento.findById(req.params._id)
     .then(enventoFound =>{
         if(!enventoFound){
             return res.status(404).end();
         }
         return res.status(200).json(enventoFound);
-    }).catch(err => next(err));
+    }).catch(err => next(err));*/
 })
 
