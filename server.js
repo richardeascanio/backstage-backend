@@ -8,7 +8,7 @@ var bodyParser = require('body-parser');
 
 mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
 
-var Evento = mongoose.model('eventos', eventosSchema) 
+var Evento = mongoose.model('./models/eventos', eventosSchema) 
 
 //express
 var app = express();
@@ -26,9 +26,9 @@ console.log('Servidor corrienndo en puerto ');
 
 //find by id
 
-app.get('/api/eventos/:id', function(req,res){
+app.get('/api/eventos/:_id', function(req,res){
 
-    Evento.findById(req.params.id)
+    Evento.findById(req.params._id)
     .then(enventoFound =>{
         if(!enventoFound){
             return res.status(404).end();
