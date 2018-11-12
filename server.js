@@ -40,10 +40,10 @@ app.get('/api/eventos/:_id', function(req,res){
 app.get('/api/locales/:_id', function(req,res){
  
     local.findById(req.params._id)
-    .then(enventoFound =>{
-        if(!enventoFound){
+    .then(localFound =>{
+        if(!localFound){
             return res.status(404).end();
         }
-        return res.status(200).json(enventoFound);
+        return res.status(200).json(localFound);
     }).catch(err => next(err));
 })
