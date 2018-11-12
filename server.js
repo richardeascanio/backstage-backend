@@ -21,3 +21,16 @@ app.use('/api', require('./routes/api'));
 
 app.listen(process.env.PORT || 3000);
 console.log('Servidor corrienndo en puerto ');
+
+//get by Id
+
+app.get('eventos/:id',function(req,res){
+    Evento.findById(req.params._id)
+    .then(eventoEncontrado => {
+        if(!eventoEncontrado){
+            return res.status(404).end();
+        }
+        return res.status(200).json(eventoEncontrado)
+    })
+    .catch(err => next(err))
+})
