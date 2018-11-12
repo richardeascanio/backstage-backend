@@ -14,7 +14,7 @@ var locales = require('../models/locales');
 
     eventos.methods(['get', 'post', 'put', 'delete']);
     eventos.register(router, '/eventos');
-    eventos.register(router, '/eventos/:_id')
+    eventos.register(router, '/eventos/:_id');
 
     //locales
 
