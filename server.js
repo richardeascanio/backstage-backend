@@ -24,7 +24,7 @@ app.use('/api', require('./routes/api'));
 app.listen(process.env.PORT || 3000);
 console.log('Servidor corrienndo en puerto ');
 
-//find by id
+//find by id eventos
 
 app.get('/api/eventos/:_id', function(req,res){
  
@@ -36,6 +36,8 @@ app.get('/api/eventos/:_id', function(req,res){
         return res.status(200).json(enventoFound);
     }).catch(err => next(err));
 })
+
+//find by id locales
 
 app.get('/api/locales/:_id', function(req,res){
  

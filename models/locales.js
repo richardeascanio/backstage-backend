@@ -4,7 +4,11 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
+//Schema
+
 var localesSchema = new mongoose.Schema({
+
+    //Atributos
     
     _id: Schema.ObjectId,
     Name: String,

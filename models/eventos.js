@@ -3,8 +3,13 @@ var restful= require('node-restful');
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
+ 
+//Schema
 
 var eventosSchema = new mongoose.Schema({
+
+    //Atributos
+    
     _id: Schema.ObjectId,
     Name: String,
     Productor: String,
