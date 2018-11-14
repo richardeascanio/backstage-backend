@@ -22,4 +22,4 @@ var administradoresSchema = new mongoose.Schema({
 
 //retorno modelo
 
-module.exports = restful.model('locales', administradoresSchema);
+module.exports = restful.model('administradores', administradoresSchema);

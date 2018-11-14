@@ -22,4 +22,4 @@ var usuariosSchema = new mongoose.Schema({
 
 //retorno modelo
 
-module.exports = restful.model('locales', usuariosSchema);
+module.exports = restful.model('usuarios', usuariosSchema);
