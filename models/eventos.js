@@ -20,7 +20,8 @@ var eventosSchema = new mongoose.Schema({
     Precio: String,
     Categoria: String,
     Imagen: String,
-    Contador: String
+    Contador: String,
+    Acumulador: String
 
 });
 

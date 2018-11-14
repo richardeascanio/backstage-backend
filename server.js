@@ -49,3 +49,30 @@ app.get('/api/locales/:_id', function(req,res){
         return res.status(200).json(localFound);
     }).catch(err => next(err));
 })
+
+//find by id usuarios
+
+app.get('/api/usuarios/:_id', function(req,res){
+ 
+    local.findById(req.params._id)
+    .then(usuarioFound =>{
+        if(!usuarioFound){
+            return res.status(404).end();
+        }
+        return res.status(200).json(usuarioFound);
+    }).catch(err => next(err));
+})
+
+
+//find by id administradores
+
+app.get('/api/administradores/:_id', function(req,res){
+ 
+    administradores.findById(req.params._id)
+    .then(administradorFound =>{
+        if(!administradorFound){
+            return res.status(404).end();
+        }
+        return res.status(200).json(administradorFound);
+    }).catch(err => next(err));
+})

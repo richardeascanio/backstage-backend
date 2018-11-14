@@ -7,6 +7,9 @@ var router = express.Router();
 
 var eventos = require('../models/eventos');
 var locales = require('../models/locales');
+var usuarios = require('../models/usuarios');
+var administradores = require('../models/administradores');
+
 
 //routes
 
@@ -19,6 +22,16 @@ var locales = require('../models/locales');
 
     locales.methods(['get', 'post', 'put', 'delete']);
     locales.register(router, '/locales');
+
+    //usuarios
+
+    usuarios.methods(['get', 'post', 'put', 'delete']);
+    usuarios.register(router, '/locales');
+
+    //administradores 
+
+    administradores.methods(['get', 'post', 'put', 'delete']);
+    administradores.register(router, '/locales');
     
 //retorno router
 
