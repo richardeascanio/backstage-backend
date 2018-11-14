@@ -3,10 +3,10 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-const controllerEvento = require('./controllers/eventos');
-const controllerLocal = require('./controllers/locales');    
-const controllerUsuario = require('./controllers/usuarios');
-const controllerAdministrador = require('./controllers/administradores')                                                 
+const controllerEvento = require('../controllers/eventos');
+const controllerLocal = require('../controllers/locales');    
+const controllerUsuario = require('../controllers/usuarios');
+const controllerAdministrador = require('../controllers/administradores')                                                 
 
 
 //conexion MONGODB
@@ -38,7 +38,6 @@ app.get('/api/locales/:_id', controllerLocal.getLocal)
 //find by id usuarios
 
 app.get('/api/usuarios/:_id', controllerUsuario.getUsuario)
-
 
 //find by id administradores
 

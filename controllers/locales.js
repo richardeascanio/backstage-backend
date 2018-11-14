@@ -15,7 +15,7 @@ function getLocal(req,res){
 }
 
 
-exports = {
+module.exports = {
     getLocal,
 
 

@@ -16,7 +16,7 @@ function getUsuario(req,res){
 }
 
 
-exports = {
+module.exports = {
     getUsuario,
 
 
