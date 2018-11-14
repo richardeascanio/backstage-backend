@@ -1,6 +1,6 @@
 'use strict'
 
-const administrador = require('./models/administrador');
+const administrador = require('../models/administrador');
 
 function getAdministrador(req,res){
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const usuario = require('./models/usuarios');
+const usuario = require('../models/usuarios');
 
 function getUsuario(req,res){
  

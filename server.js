@@ -1,3 +1,5 @@
+'use strict'
+
 // dependencias
 
 var express = require('express');

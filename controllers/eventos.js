@@ -1,6 +1,6 @@
 'use strict'
 
-const evento = require('./models/eventos');
+const evento = require('../models/eventos');
 
 function getEvento(req,res){
 

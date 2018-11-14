@@ -1,6 +1,6 @@
 'use strict'
 
-const local = require('./models/locales');
+const local = require('../models/locales');
 
 function getLocal(req,res){
     
