@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var evento = require('./models/eventos');
 var local = require('./models/locales');    
-var usuario = require('./models/usuario');
+var usuario = require('./models/usuarios');
 var administrador = require('./models/administradores');                                          
 
 
