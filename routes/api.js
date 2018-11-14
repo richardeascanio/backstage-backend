@@ -2,10 +2,10 @@
 
 const express = require('express');
 const router = express.Router();
-const controllerEvento = require('./controllers/eventos');
-const controllerLocal = require('./controllers/locales');    
-const controllerUsuario = require('./controllers/usuarios');
-const controllerAdministrador = require('./controllers/administradores')   
+const controllerEvento = require('../controllers/eventos');
+const controllerLocal = require('../controllers/locales');    
+const controllerUsuario = require('../controllers/usuarios');
+const controllerAdministrador = require('../controllers/administradores')   
 
 
 //modelos
