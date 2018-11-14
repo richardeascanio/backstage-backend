@@ -1,7 +1,12 @@
 //dependencias
 
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const controllerEvento = require('./controllers/eventos');
+const controllerLocal = require('./controllers/locales');    
+const controllerUsuario = require('./controllers/usuarios');
+const controllerAdministrador = require('./controllers/administradores')   
+
 
 //modelos
 
@@ -33,6 +38,24 @@ var administradores = require('../models/administradores');
     administradores.methods(['get', 'post', 'put', 'delete']);
     administradores.register(router, '/administradores');
     
+    //get id
+
+    //find by id eventos
+
+    router.get('/eventos/:_id', controllerEvento.getEvento)
+
+    //find by id locales
+
+    router.get('/locales/:_id', controllerLocal.getLocal)
+
+    //find by id usuarios
+
+    router.get('/usuarios/:_id', controllerUsuario.getUsuario)
+
+    //find by id administradores
+
+    router.get('/administradores/:_id', controllerAdministrador.getAdministrador)
+
 //retorno router
 
 module.exports= router;
