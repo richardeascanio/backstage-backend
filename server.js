@@ -5,10 +5,10 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-const controllerEvento = require('../controllers/eventos');
-const controllerLocal = require('../controllers/locales');    
-const controllerUsuario = require('../controllers/usuarios');
-const controllerAdministrador = require('../controllers/administradores')                                                 
+const controllerEvento = require('./controllers/eventos');
+const controllerLocal = require('./controllers/locales');    
+const controllerUsuario = require('./controllers/usuarios');
+const controllerAdministrador = require('./controllers/administradores')                                                 
 
 
 //conexion MONGODB
