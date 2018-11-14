@@ -3,10 +3,10 @@
 var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
-var evento = require('./models/eventos');
-var local = require('./models/locales');    
-var usuario = require('./models/usuarios');
-var administrador = require('./models/administradores');                                          
+const controllerEvento = require('./controllers/eventos');
+const controllerLocal = require('./controllers/locales');    
+const controllerUsuario = require('./controllers/usuarios');
+const controllerAdministrador = require('./controllers/administradores')                                                 
 
 
 //conexion MONGODB
@@ -29,53 +29,17 @@ console.log('Servidor corrienndo en puerto ');
 
 //find by id eventos
 
-app.get('/api/eventos/:_id', function(req,res){
- 
-    evento.findById(req.params._id)
-    .then(enventoFound =>{
-        if(!enventoFound){
-            return res.status(404).end();
-        }
-        return res.status(200).json(enventoFound);
-    }).catch(err => next(err));
-})
+app.get('/api/eventos/:_id', controllerEvento.getEvento)
 
 //find by id locales
 
-app.get('/api/locales/:_id', function(req,res){
- 
-    local.findById(req.params._id)
-    .then(localFound =>{
-        if(!localFound){
-            return res.status(404).end();
-        }
-        return res.status(200).json(localFound);
-    }).catch(err => next(err));
-})
+app.get('/api/locales/:_id', controllerLocal.getLocal)
 
 //find by id usuarios
 
-app.get('/api/usuarios/:_id', function(req,res){
- 
-    usuario.findById(req.params._id)
-    .then(usuarioFound =>{
-        if(!usuarioFound){
-            return res.status(404).end();
-        }
-        return res.status(200).json(usuarioFound);
-    }).catch(err => next(err));
-})
+app.get('/api/usuarios/:_id', controllerUsuario.getUsuario)
 
 
 //find by id administradores
 
-app.get('/api/administradores/:_id', function(req,res){
- 
-    administrador.findById(req.params._id)
-    .then(administradorFound =>{
-        if(!administradorFound){
-            return res.status(404).end();
-        }
-        return res.status(200).json(administradorFound);
-    }).catch(err => next(err));
-})
+app.get('/api/administradores/:_id', controllerAdministrador.getAdministrador)
