@@ -14,7 +14,6 @@ function getEvento(req,res){
 
 }
 
-
 module.exports = {
     getEvento
 }
