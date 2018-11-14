@@ -12,12 +12,10 @@ function getUsuario(req,res){
         return res.status(200).json(usuarioFound);
     }).catch(err => next(err));
 
-
 }
 
 
 module.exports = {
-    getUsuario,
-
-
+    getUsuario
+    
 }

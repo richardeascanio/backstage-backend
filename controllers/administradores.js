@@ -17,7 +17,5 @@ function getAdministrador(req,res){
 
 
 module.exports = {
-    getAdministrador,
-
-
+    getAdministrador
 }

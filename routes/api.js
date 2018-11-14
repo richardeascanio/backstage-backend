@@ -5,10 +5,10 @@ var router = express.Router();
 
 //modelos
 
-var eventos = require('../models/eventos');
-var locales = require('../models/locales');
-var usuarios = require('../models/usuarios');
-var administradores = require('../models/administradores');
+var eventos = require('./models/eventos');
+var locales = require('./models/locales');
+var usuarios = require('./models/usuarios');
+var administradores = require('./models/administradores');
 
 
 //routes
