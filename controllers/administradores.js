@@ -1,12 +1,10 @@
 'use strict'
 
-const administrador = require('../models/administrador');
+const administrador = require('../models/administradores');
 
 function getAdministrador(req,res){
 
-    let _id = req.params._id
-
-    administrador.findById(_id)
+    administrador.findById(req.params._id)
     .then(administradorFound =>{
         if(!administradorFound){
             return res.status(404).end();
