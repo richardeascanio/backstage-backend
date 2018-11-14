@@ -4,7 +4,8 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
-const bodyParser = require('body-parser');                                              
+const bodyParser = require('body-parser');
+const api = require('./routes/api');                                              
 
 //conexion MONGODB
 
@@ -17,7 +18,7 @@ app.use(bodyParser.json());
 
 //routes
 
-app.use('/api', require('./routes/api'));
+app.use('/api', api);
 
 //Inicio Servidor
 
