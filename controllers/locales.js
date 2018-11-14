@@ -4,7 +4,9 @@ const local = require('../models/locales');
 
 function getLocal(req,res){
     
-    local.findById(req.params._id)
+    let _id = req.params._id
+
+    local.findById(_id)
     .then(localFound =>{
         if(!localFound){
             return res.status(404).end();

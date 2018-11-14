@@ -4,7 +4,9 @@ const administrador = require('../models/administrador');
 
 function getAdministrador(req,res){
 
-    administrador.findById(req.params._id)
+    let _id = req.params._id
+
+    administrador.findById(_id)
     .then(administradorFound =>{
         if(!administradorFound){
             return res.status(404).end();
@@ -13,8 +15,6 @@ function getAdministrador(req,res){
     }).catch(err => next(err));
 
 }
-
-
 
 module.exports = {
     getAdministrador

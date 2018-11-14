@@ -4,7 +4,9 @@ const evento = require('../models/eventos');
 
 function getEvento(req,res){
 
-    evento.findById(req.params._id)
+    let _id = req.params._id
+
+    evento.findById(_id)
     .then(enventoFound =>{
         if(!enventoFound){
             return res.status(404).end();
