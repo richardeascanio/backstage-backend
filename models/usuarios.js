@@ -1,8 +1,8 @@
 // dependencias
-var restful= require('node-restful');
-var mongoose = require('mongoose');
+const restful= require('node-restful');
+const mongoose = require('mongoose');
 
-var Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 //Schema
 
