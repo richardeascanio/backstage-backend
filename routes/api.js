@@ -26,12 +26,12 @@ var administradores = require('../models/administradores');
     //usuarios
 
     usuarios.methods(['get', 'post', 'put', 'delete']);
-    usuarios.register(router, '/locales');
+    usuarios.register(router, '/usuarios');
 
     //administradores 
 
     administradores.methods(['get', 'post', 'put', 'delete']);
-    administradores.register(router, '/locales');
+    administradores.register(router, '/administradores');
     
 //retorno router
 
