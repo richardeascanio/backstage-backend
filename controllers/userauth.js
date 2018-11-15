@@ -11,8 +11,6 @@ function signUp(req,res){
     Apellido: req.body.Apellido,
     Correo: req.body.Correo,
     Telefono: req.body.Telefono,
-    Imagen: req.body.Imagen,
-    Ciudad: req.body.Ciudad
     })
     usuario.save((err) =>{
         if (err) res.status(500).send({message: `Error al crear el usuario: ${err}`} )
@@ -30,6 +28,20 @@ function Prueba(req,res){
 
 function signIn(req,res){
 
+    Usuario.find({ Correo: req.params.Correo}, (err,usuario)=>{
+        
+        if (err) return res.status(500).send({message: `Error al logearse el usuario: ${err}`}) 
+        
+        if(!usuario)  return res.status(404).send({message: `No existe el usuario`})
+        
+        req.usuario = usuario
+        res.status(200).
+        send({
+            message: 'Loggeado correctamente',
+            token: service.createToken(usuario) 
+        })
+
+    })
     
 }
 
