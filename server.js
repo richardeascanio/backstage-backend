@@ -5,7 +5,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const api = require('./routes/api');  
+const api = require('./routes');  
 const config = require('./config');                                            
 
 //conexion MONGODB

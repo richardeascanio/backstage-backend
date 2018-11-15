@@ -59,6 +59,10 @@ var administradores = require('../models/administradores');
 
     //prueba sesion
 
+    router.get('/private',auth.isAuth, function(req,res){
+
+         res.status(200).send({message: `Tiene acceso`}) 
+    })
 
 //retorno router
 
