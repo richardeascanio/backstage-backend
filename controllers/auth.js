@@ -22,6 +22,12 @@ function signUp(req,res){
 
 }
 
+function Prueba(req,res){
+
+    res.status(200).send({message: `Tiene acceso`})
+}
+
+
 function signIn(req,res){}
 
 
