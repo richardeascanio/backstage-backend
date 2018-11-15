@@ -22,22 +22,22 @@ var administradores = require('../models/administradores');
 
     //eventos
 
-    eventos.methods(['get', 'post', 'put', 'delete']);
+    eventos.methods(['get', 'post', 'put']);
     eventos.register(router, '/eventos');
 
     //locales
 
-    locales.methods(['get', 'post', 'put', 'delete']);
+    locales.methods(['get', 'post', 'put']);
     locales.register(router, '/locales');
 
     //usuarios
 
-    usuarios.methods(['get', 'post', 'put', 'delete']);
+    usuarios.methods(['get', 'post', 'put']);
     usuarios.register(router, '/usuarios');
 
     //administradores 
 
-    administradores.methods(['get', 'post', 'put', 'delete']);
+    administradores.methods(['get', 'post', 'put']);
     administradores.register(router, '/administradores');
     
     //get id
