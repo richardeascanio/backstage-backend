@@ -60,10 +60,13 @@ var administradores = require('../models/administradores');
 
     //prueba sesion
 
-    console.log(auth.isAuth)
-    console.log(controllerAuth.Prueba)
+    
+    router.get('/private', (req, res) => {
 
-    // router.get('/private',auth.isAuth,controllerAuth.Prueba)
+        console.log(auth.isAuth)
+        console.log(controllerAuth.Prueba)
+        res.send('hola')
+    } )
 
 //retorno router
 
