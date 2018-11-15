@@ -24,5 +24,5 @@ app.use('/api', api);
 //Inicio Servidor
 
 app.listen(config.port);
-console.log('Servidor corrienndo en puerto: '+ config.port);
+console.log('Servidor corriendo en puerto: '+ config.port);
 
