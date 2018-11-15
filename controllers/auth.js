@@ -28,12 +28,15 @@ function Prueba(req,res){
 }
 
 
-function signIn(req,res){}
+function signIn(req,res){
+
+    
+}
 
 
 module.exports = {
 
-    //signIn,
+    signIn,
     signUp,
     Prueba
 }
