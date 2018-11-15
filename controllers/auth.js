@@ -33,7 +33,7 @@ function signIn(req,res){}
 
 module.exports = {
 
-    signIn,
+    //signIn,
     signUp,
     Prueba
 }

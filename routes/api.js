@@ -7,7 +7,7 @@ const controllerLocal = require('../controllers/locales');
 const controllerUsuario = require('../controllers/usuarios');
 const controllerAdministrador = require('../controllers/administradores');
 const controllerAuth = require('../controllers/auth');
-const authen = require('../middlewares/auth');   
+const auth = require('../middlewares/auth');   
 
 
 //modelos
@@ -60,7 +60,7 @@ var administradores = require('../models/administradores');
 
     //prueba sesion
 
-    router.get('/private',authen.isAuth,controllerAuth.Prueba)
+    router.get('/private',auth.isAuth,controllerAuth.Prueba)
 
 //retorno router
 
