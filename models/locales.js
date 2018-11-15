@@ -25,4 +25,4 @@ const localesSchema = new mongoose.Schema({
 
 //retorno modelo
 
-module.exports = restful.model('locales', localesSchema);
+module.exports = mongoose.model('locales', localesSchema);
