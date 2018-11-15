@@ -22,7 +22,6 @@ function isAuth(req,res,next){
 
     req.usuario = payload.sub
     next()
-
 }
 
 module.exports = isAuth

@@ -5,7 +5,8 @@ const router = express.Router();
 const controllerEvento = require('../controllers/eventos');
 const controllerLocal = require('../controllers/locales');    
 const controllerUsuario = require('../controllers/usuarios');
-const controllerAdministrador = require('../controllers/administradores')   
+const controllerAdministrador = require('../controllers/administradores');
+const auth = require('../middlewares/auth');   
 
 
 //modelos
@@ -55,6 +56,13 @@ var administradores = require('../models/administradores');
     //find by id administradores
 
     router.get('/administradores/:_id', controllerAdministrador.getAdministrador)
+
+    //prueba sesion
+
+    router.get('/private',auth.isAuth, function(req,res){
+
+        res.status(200).send({message: `Tiene acceso`}) 
+    })
 
 //retorno router
 
