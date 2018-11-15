@@ -6,7 +6,7 @@ const controllerEvento = require('../controllers/eventos');
 const controllerLocal = require('../controllers/locales');    
 const controllerUsuario = require('../controllers/usuarios');
 const controllerAdministrador = require('../controllers/administradores');
-const auth = require('../middlewares/auth');   
+const authen = require('../middlewares/auth');   
 
 
 //modelos
@@ -59,7 +59,7 @@ var administradores = require('../models/administradores');
 
     //prueba sesion
 
-    router.get('/private',auth.isAuth, function(req,res){
+    router.get('/private',authen.isAuth, function(req,res){
 
          res.status(200).send({message: `Tiene acceso`}) 
     })
