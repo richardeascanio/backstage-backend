@@ -45,4 +45,4 @@ administradoresSchema.pre('save', (next)=> {
 
 //retorno modelo
 
-module.exports = mongoose.model('administradores', administradoresSchema);
+module.exports = restful.model('administradores', administradoresSchema);

@@ -27,4 +27,4 @@ const eventosSchema = new mongoose.Schema({
 
 //retorno modelo
 
-module.exports = mongoose.model('eventos', eventosSchema);
+module.exports = restful.model('eventos', eventosSchema);
