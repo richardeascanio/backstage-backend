@@ -6,7 +6,7 @@ const controllerEvento = require('../controllers/eventos');
 const controllerLocal = require('../controllers/locales');    
 const controllerUsuario = require('../controllers/usuarios');
 const controllerAdministrador = require('../controllers/administradores');
-const controllerAuth = require('../controllers/auth');
+const controllerAuth = require('../controllers/userauth');
 const auth = require('../middlewares/auth')   
 
 
