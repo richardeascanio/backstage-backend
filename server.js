@@ -5,11 +5,12 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const api = require('./routes/api');                                              
+const api = require('./routes/api');  
+const config = require('./config');                                            
 
 //conexion MONGODB
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(config.db, {useNewUrlParser: true});
 
 //express
 const app = express();
@@ -22,6 +23,6 @@ app.use('/api', api);
 
 //Inicio Servidor
 
-app.listen(process.env.PORT || 3000);
-console.log('Servidor corrienndo en puerto ');
+app.listen(config.port);
+console.log('Servidor corrienndo en puerto: '+ config.port);
 
