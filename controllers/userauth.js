@@ -13,7 +13,7 @@ function signUp(req,res){
     Telefono: req.body.Telefono,
     })
     usuario.save((err) =>{
-        if (err) res.status(500).send({message: `Error al crear el usuario: ${err}`+`usuario: ${usuario}`} )
+        if (err) res.status(500).send({message: `Error al crear el usuario: ${err}`+` usuario: ${usuario}`} )
 
         return res.status(200).send({token: service.createToken(usuario)})
     })
