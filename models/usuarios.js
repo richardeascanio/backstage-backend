@@ -42,4 +42,4 @@ usuariosSchema.pre('save', function(next){
 
 //retorno modelo
 
-module.exports = restful.model('usuarios', usuariosSchema);
+module.exports = mongoose.model('usuarios', usuariosSchema);
