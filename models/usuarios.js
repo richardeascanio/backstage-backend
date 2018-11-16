@@ -22,7 +22,7 @@ const usuariosSchema = new mongoose.Schema({
 
 });
 
-usuariosSchema.pre('save', function(next) {
+usuariosSchema.pre('save', (next)=> {
 
     let usuario = this;
     if(!usuario.isModified('Clave')) return next()
