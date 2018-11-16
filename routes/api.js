@@ -40,7 +40,7 @@ var administradores = require('../models/administradores');
     administradores.methods(['get', 'post', 'put', 'delete']);
     administradores.register(router, '/administradores');
     
-    //get id
+    //get by id
 
     //find by id eventos
 
@@ -60,6 +60,9 @@ var administradores = require('../models/administradores');
 
     //prueba sesion
 
+    router.post('/signup',controllerAuth.signUp)
+
+    router.post('/signin',controllerAuth.signIn)
     
     router.get('/private', auth, controllerAuth.Prueba)
 
