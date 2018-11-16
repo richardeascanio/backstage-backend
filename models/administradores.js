@@ -10,8 +10,6 @@ const Schema = mongoose.Schema;
 const administradoresSchema = new mongoose.Schema({
 
     //Atributos
-    
-    _id: Schema.ObjectId,
     Nombre: String,
     Apellido: String,
     Correo: String,

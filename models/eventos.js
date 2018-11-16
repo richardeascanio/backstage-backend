@@ -9,8 +9,6 @@ const Schema = mongoose.Schema;
 const eventosSchema = new mongoose.Schema({
 
     //Atributos
-    
-    _id: Schema.ObjectId,
     Name: String,
     Productor: String,
     Fecha: String,

@@ -9,8 +9,6 @@ const Schema = mongoose.Schema;
 const localesSchema = new mongoose.Schema({
 
     //Atributos
-    
-    _id: Schema.ObjectId,
     Name: String,
     Direccion: String,
     Calificacion: String,
