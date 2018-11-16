@@ -44,13 +44,12 @@ function signIn(req, res)
             
             
             res.status(200)
-            .send({message: 'Te has logueado correctamente', token: service
-            
-            .createToken(usuario, req.originalUrl)}) 
+            .send({message: 'Te has logueado correctamente', 
+            token: service.createToken(usuario)})
         }
            
-        else{ res.status(500).send({message: 'Email o Contraseña incorrectos'}) 
-        } 
+        res.status(500).send({message: 'Contraseña incorrecta'}) 
+        
     }) 
 }
 
