@@ -36,7 +36,7 @@ function signIn(req, res)
         if (!usuario) return res.status(404)
         .send({ message: 'Usuario no registrado' })
 
-        const password_verification = bcrypt.compareSync(req.body.password, usuario.password) 
+        const password_verification = bcrypt.compareSync(req.body.Clave, usuario.Clave) 
     
         if(password_verification){ 
             req.user = usuario 
