@@ -28,7 +28,6 @@ function Prueba(req,res){
 
 function signIn(req,res){
 
-    let clave = req.params.Clave
     Usuario.find({ Correo: req.params.Correo}, (err,usuario)=>{
         
         if (err) return res.status(500).send({message: `Error al logearse el usuario: ${err}`}) 
@@ -36,9 +35,6 @@ function signIn(req,res){
         if(!usuario)  return res.status(404).send({message: `No existe el usuario`})
         
         req.usuario = usuario
-
-        if(clave != usuario.Clave) return res.send({message: `Clave Invalida`})
-        
         res.status(200).
         send({
             message: 'Loggeado correctamente',
