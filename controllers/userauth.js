@@ -3,7 +3,6 @@
 const mongoose = require('mongoose');
 const Usuario = require('../models/usuarios');
 const service = require('../services');
-const bcrypt = require('bcrypt-nodejs');
 
 function signUp(req,res){
     const usuario = new Usuario({
@@ -27,32 +26,26 @@ function Prueba(req,res){
 }
 
 
-function signIn(req, res)
-    { Usuario.findOne({Correo: req.body.Correo}, (err, usuario) => { 
+function signIn(req,res){
+
+    Usuario.find({ Correo: req.params.Correo}, (err,usuario)=>{
         
-        if (err) return res.status(500)
-        .send({ message: `Error al realizar la petición ${err}`}) 
+        if (err) return res.status(500).send({message: `Error al logearse el usuario: ${err}`}) 
+        
+        if(!usuario)  return res.status(404).send({message: `No existe el usuario`})
+        
+        req.usuario = usuario
+        const token = req.headers.authorization
+        
+        res.status(200).
+        send({
+            message: 'Loggeado correctamente',
+            token: service.createToken(usuario) 
+        })
 
-        if (!usuario) return res.status(404)
-        .send({ message: 'Usuario no registrado' })
-
-        req.usuario = usuario 
-
-        const password_verification = bcrypt.compareSync(req.body.Clave, usuario.Clave) 
+    })
     
-        if(password_verification){ 
-            
-            
-            res.status(200)
-            .send({message: 'Te has logueado correctamente', 
-            token: service.createToken(usuario)})
-        }
-           
-        else res.status(500).send({message: 'Contraseña incorrecta'}) 
-        
-    }) 
 }
-
 
 module.exports = {
 
