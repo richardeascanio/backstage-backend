@@ -2,8 +2,6 @@
 const restful= require('node-restful');
 const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema;
- 
 //Schema
 
 const eventosSchema = new mongoose.Schema({
