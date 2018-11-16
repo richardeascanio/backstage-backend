@@ -48,7 +48,7 @@ function signIn(req, res)
             token: service.createToken(usuario)})
         }
            
-        res.status(500).send({message: 'Contraseña incorrecta'}) 
+        else res.status(500).send({message: 'Contraseña incorrecta'}) 
         
     }) 
 }
