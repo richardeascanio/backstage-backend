@@ -26,23 +26,28 @@ function Prueba(req,res){
 }
 
 
-function signIn(req,res){
+function signIn(req, res)
+    { Usuario.findOne({email: req.body.email}, (err, usuario) => { 
+        
+        if (err) return res.status(500)
+        .send({ message: `Error al realizar la petición ${err}`}) 
 
-    Usuario.find({ Correo: req.params.Correo}, (err,usuario)=>{
-        
-        if (err) return res.status(500).send({message: `Error al logearse el usuario: ${err}`}) 
-        
-        if(!usuario)  return res.status(404).send({message: `No existe el usuario`})
-        
-        req.usuario = usuario
-        res.status(200).
-        send({
-            message: 'Loggeado correctamente',
-            token: service.createToken(usuario) 
-        })
+        if (!usuario) return res.status(404)
+        .send({ message: 'Usuario no registrado' })
 
-    })
+        const password_verification = bcrypt.compareSync(req.body.password, usuario.password) 
     
+        if(password_verification){ 
+            req.user = usuario 
+            
+            res.status(200)
+            .send({message: 'Te has logueado correctamente', token: service
+            .createToken(usuario, req.originalUrl)}) 
+        }
+        
+        else{ res.status(500).send({message: 'Email o Contraseña incorrectos'}) 
+        } 
+    }) 
 }
 
 
