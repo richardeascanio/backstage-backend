@@ -28,7 +28,7 @@ function Prueba(req,res){
 
 
 function signIn(req, res)
-    { Usuario.findOne({email: req.body.email}, (err, usuario) => { 
+    { Usuario.findOne({Correo: req.body.Correo}, (err, usuario) => { 
         
         if (err) return res.status(500)
         .send({ message: `Error al realizar la petición ${err}`}) 
