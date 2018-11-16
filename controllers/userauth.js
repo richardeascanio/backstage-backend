@@ -4,9 +4,12 @@ const mongoose = require('mongoose');
 const Usuario = require('../models/usuarios');
 const service = require('../services');
 
+const Schema = mongoose.Schema;
+
 function signUp(req,res){
     const usuario = new Usuario({
     
+    _id: Schema.ObjectId,     
     Nombre: req.body.Nombre,
     Apellido: req.body.Apellido,
     Correo: req.body.Correo,
