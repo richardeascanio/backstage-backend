@@ -8,8 +8,7 @@ const Schema = mongoose.Schema;
 
 function signUp(req,res){
     const usuario = new Usuario({
-    
-    _id: 'asdf',     
+      
     Nombre: req.body.Nombre,
     Apellido: req.body.Apellido,
     Correo: req.body.Correo,

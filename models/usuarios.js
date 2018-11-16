@@ -10,8 +10,6 @@ const Schema = mongoose.Schema;
 const usuariosSchema = new mongoose.Schema({
 
     //Atributos
-    
-    _id: Schema.ObjectId,
     Nombre: String,
     Apellido: String,
     Correo: {type: String, unique: true, lowercase: true},
