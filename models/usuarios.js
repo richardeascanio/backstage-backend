@@ -24,18 +24,17 @@ const usuariosSchema = new mongoose.Schema({
 
 usuariosSchema.pre('save', (next)=> {
 
-    let usuario = this;
-    if(!usuario.isModified('Clave')) return next()
+    if(!this.isModified('Clave')) return next()
 
     bcrypt.genSalt(10, (err,salt)=> {
 
         if(err) return next(err)
 
-        bcrypt.hash(usuario.Clave,salt,null,(err,hash)=>{
+        bcrypt.hash(this.Clave,salt,null,(err,hash)=>{
 
             if(err) return next(err)
 
-            usuario.Clave = hash
+            this.Clave = hash
             next()
         })
     })
