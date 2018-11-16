@@ -37,7 +37,7 @@ function signIn(req,res){
         
         req.usuario = usuario
 
-        if(usuario.Clave != clave) return res.send({message: `Clave Invalida`})
+        if(clave != usuario.Clave) return res.send({message: `Clave Invalida`})
         
         res.status(200).
         send({
