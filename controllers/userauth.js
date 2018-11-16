@@ -35,7 +35,6 @@ function signIn(req,res){
         if(!usuario)  return res.status(404).send({message: `No existe el usuario`})
         
         req.usuario = usuario
-        const token = req.headers.authorization
         
         res.status(200).
         send({
