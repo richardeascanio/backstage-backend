@@ -34,7 +34,7 @@ function Prueba(req,res){
          if (!usuario)
            return res.status(404).send({ message: 'Usuario no registrado' });
    
-         const password_verification = bcrypt.compareSync(
+         const password_verification = bcrypt.compare(
            req.body.Clave,
            usuario.Clave
          );
