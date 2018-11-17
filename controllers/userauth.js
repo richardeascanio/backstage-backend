@@ -37,6 +37,7 @@ async function signIn(req, res) {
            req.body.Clave,
            usuario.Clave
          );
+         console.log(`debbug... user: ${usuario}\n Verificacion: ${password_verification}`)
    
          if (password_verification) {
       
