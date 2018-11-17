@@ -27,8 +27,9 @@ function Prueba(req,res){
 }
 
 
-async function signIn(req, res) {
-    await Usuario.findOne({ Correo: req.body.Correo })
+ function signIn(req, res) {
+
+  Usuario.findOne({ Correo: req.body.Correo })
        .then(usuario => {
          if (!usuario)
            return res.status(404).send({ message: 'Usuario no registrado' });
@@ -37,7 +38,7 @@ async function signIn(req, res) {
            req.body.Clave,
            usuario.Clave
          );
-         console.log(`debbug... user: ${usuario}\n Verificacion: ${password_verification}`)
+         console.log(`debbug... user: ${usuario}\n Verificacion: ${pass}`)
    
          if (password_verification) {
       
@@ -49,6 +50,7 @@ async function signIn(req, res) {
            res.status(500).send({ message: 'Email o Contraseña incorrectos' });
          }
        })
+
        .catch(err => {
          return res
            .status(500)
