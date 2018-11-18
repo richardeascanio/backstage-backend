@@ -45,7 +45,9 @@ function signIn(req, res) {
         usuario.Clave
       );
 
-      console.log(`debbug... user: ${usuario}\n Verificacion: ${pass}`)
+      console.log(`debbug... user: ${usuario}\n Verificacion: ${password_verification}`)
+
+      console.log(`debbug 2... user.clave: ${usuario.Clave}`)
       
       if (password_verification){
 
