@@ -45,6 +45,8 @@ function signIn(req, res) {
         usuario.Clave
       );
 
+      console.log(`debbug... user: ${usuario}\n Verificacion: ${pass}`)
+      
       if (password_verification){
 
         res.status(200).
@@ -59,7 +61,6 @@ function signIn(req, res) {
 
     })    
 }
-
 
 module.exports = {
 
