@@ -9,9 +9,8 @@ const usuariosSchema = new mongoose.Schema({
 
     //Atributos
     Nombre: String,
-    Apellido: String,
     Correo: {type: String, unique: true, lowercase: true},
-    Telefono: String,
+    Username: {type: String, unique: true, lowercase: true},
     Clave: {type: String, select: false},
     MiembroDesde: {type:Date, default: Date.now()},
     LastLogin: Date
