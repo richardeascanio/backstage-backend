@@ -32,7 +32,8 @@ function signIn(req, res) {
   Usuario.find({ Correo: req.params.Correo})
   .then(usuario=>{
         if(!usuario) return res.status(404).send({message: `Usuario no encontrado`})
- 
+
+        console.log(`Usuario: ${usuario}`)
         const hashed_password = usuario.Clave
 
         if(bcrypt.compareSync(req.body.Clave, hashed_password)){
@@ -46,7 +47,8 @@ function signIn(req, res) {
         else {
             res.status(401).send({ message: 'Email o Contraseña incorrectos' })
         } 
-    })
+    }).catch(err=>
+        console.log(err))
 }
 
 
