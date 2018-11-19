@@ -11,7 +11,7 @@ const usuariosSchema = new mongoose.Schema({
     Nombre: String,
     Correo: {type: String, unique: true, lowercase: true},
     Username: {type: String, unique: true, lowercase: true},
-    Clave: {type: String, select: false},
+    Clave: String,
     MiembroDesde: {type:Date, default: Date.now()},
     LastLogin: Date
 
