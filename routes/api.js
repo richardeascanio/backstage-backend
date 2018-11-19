@@ -39,6 +39,8 @@ var administradores = require('../models/administradores');
 
     administradores.methods(['get', 'post', 'put', 'delete']);
     administradores.register(router, '/administradores');
+
+    router.put('/eventos/:_id', controllerEvento.updateEvento)
     
     //get by id
 
