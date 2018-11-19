@@ -23,6 +23,7 @@ var administradores = require('../models/administradores');
     //eventos
 
 
+    eventos.register(router, '/eventos');
 
     //locales
 
