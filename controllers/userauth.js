@@ -39,9 +39,12 @@ function signIn(req, res) {
 
         if(bcrypt.compareSync(req.body.Clave, hashed_password)){
             console.log('true')
-            res.status(200).json({
+            res.status(200)
+            .json({
+
             message: 'Te has logueado correctamente',
             token: service.createToken(usuario) 
+            
             })
 
         }
