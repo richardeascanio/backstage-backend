@@ -31,24 +31,25 @@ function signIn(req, res) {
   
   Usuario.find({ Correo: req.params.Correo})
   .then(usuario=>{
-        if(!usuario) return res.status(404).send({message: `Usuario no encontrado`})
+        if(!usuario) return res.status(404).json({message: `Usuario no encontrado`})
 
-        console.log(`Usuario: ${usuario}`)
+        console.log(`Usuario: ${JSON.stringify(usuario)}`)
         const hashed_password = usuario.Clave
+        console.log(hashed_password)
 
         if(bcrypt.compareSync(req.body.Clave, hashed_password)){
-
-            res.status(200).send({
+            console.log('true')
+            res.status(200).json({
             message: 'Te has logueado correctamente',
             token: service.createToken(usuario) 
             })
 
         }
         else {
-            res.status(401).send({ message: 'Email o Contraseña incorrectos' })
+            res.status(401).json({ message: 'Email o Contraseña incorrectos' })
         } 
     }).catch(err=>
-        console.log(err))
+        console.log('catch ', err))
 }
 
 
