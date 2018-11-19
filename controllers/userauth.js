@@ -29,7 +29,7 @@ function Prueba(req,res){
 
 function signIn(req, res) {
   
-  Usuario.find({ Correo: req.params.Correo})
+  Usuario.findOne({ Correo: req.params.Correo})
   .then(usuario=>{
         if(!usuario) return res.status(404).json({message: `Usuario no encontrado`})
 
