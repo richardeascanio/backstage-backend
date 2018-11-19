@@ -22,7 +22,7 @@ var administradores = require('../models/administradores');
 
     //eventos
 
-
+    eventos.methods(['get', 'post', 'delete']);
     eventos.register(router, '/eventos');
 
     //locales
