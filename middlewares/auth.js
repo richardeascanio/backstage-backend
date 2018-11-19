@@ -10,6 +10,8 @@ function isAuth(req,res,next){
     }
         const token = req.headers.authorization
 
+        console.log(token)
+
         services.decodeToken(token)
         .then(response =>{
             req.user = response
