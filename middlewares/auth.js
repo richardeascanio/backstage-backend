@@ -6,7 +6,7 @@ function isAuth(req,res,next){
 
     if(!req.headers.authorization){
 
-        return res.status(403).send({message: `No tiene autorizacion`})
+        return res.status(403).json({message: `No tiene autorizacion`})
     }
         const token = req.headers.authorization
 
