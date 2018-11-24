@@ -43,8 +43,10 @@ function signIn(req, res) {
             .json({
 
             message: 'Te has logueado correctamente',
-            token: service.createToken(usuario) 
-            
+            token: service.createToken(usuario), 
+            Name: usuario.Nombre,
+            _id: usuario._id
+
             })
 
         }

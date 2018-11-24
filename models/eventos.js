@@ -9,7 +9,7 @@ const eventosSchema = new mongoose.Schema({
     //Atributos
     Name: String,
     Productor: String,
-    Fecha: String,
+    Fecha: Date,
     Lugar: String,
     Calificacion: String,
     Descripcion: String,
