@@ -33,7 +33,7 @@ function signIn(req, res) {
   .then(usuario=>{
         if(!usuario) {
             
-            console.log("mensaje "+res.status(404).send({message: `Usuario no encontrado`}))
+            console.log("mensaje: Usuario no encontrado " )
             return res.status(404).json({message: `Usuario no encontrado`})
     
     
@@ -59,7 +59,7 @@ function signIn(req, res) {
 
         }
         else {
-            console.log("mensaje "+res.status(404).send({message: `Usuario no encontrado`}))
+            console.log("Email o contraseña mala")
             res.status(401).json({ message: `Email o Contraseña incorrectos`})
             
         } 
