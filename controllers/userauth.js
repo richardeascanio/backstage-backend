@@ -34,7 +34,7 @@ function signIn(req, res) {
         if(!usuario) {
             
             console.log("mensaje: Usuario no encontrado " )
-            return res.status(404).json({message: `Usuario no encontrado`})
+            return res.json({message: `Usuario no encontrado`})
     
     
     }
