@@ -50,7 +50,7 @@ function signIn(req, res) {
             res.status(200)
             .json({
 
-            message: 'Te has logueado correctamente',
+            message: 'A',
             token: service.createToken(usuario), 
             Name: usuario.Nombre,
             _id: usuario._id
@@ -60,7 +60,7 @@ function signIn(req, res) {
         }
         else {
             console.log("Email o contraseña mala")
-            res.status(401).json({ message: `Email o Contraseña incorrectos`})
+            res.status(401).json({ message: `B`})
             
         } 
     }).catch(err=>
