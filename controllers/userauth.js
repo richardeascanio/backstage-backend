@@ -36,8 +36,10 @@ function signIn(req, res) {
         console.log(`Usuario: ${JSON.stringify(usuario)}`)
         const hashed_password = usuario.Clave
         console.log(hashed_password)
+        console.log("mensaje "+message)
 
-        if(bcrypt.compareSync(req.body.Clave, hashed_password)){
+        if(bcrypt.compareSync(req.body.Clave,
+             hashed_password)){
             console.log('true')
             res.status(200)
             .json({
@@ -51,7 +53,8 @@ function signIn(req, res) {
 
         }
         else {
-            res.status(401).json({ message: 'Email o Contraseña incorrectos' })
+            res.status(401).json({ message: `Email o Contraseña incorrectos`})
+            console.log("mensaje "+message)
         } 
     }).catch(err=>
         console.log('catch ', err))
