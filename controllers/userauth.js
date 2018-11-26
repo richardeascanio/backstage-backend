@@ -31,12 +31,18 @@ function signIn(req, res) {
   
   Usuario.findOne({ Correo: req.body.Correo})
   .then(usuario=>{
-        if(!usuario) return res.status(404).json({message: `Usuario no encontrado`})
+        if(!usuario) {
+            
+            console.log("mensaje "+res.status(404).send({message: `Usuario no encontrado`}))
+            return res.status(404).json({message: `Usuario no encontrado`})
+    
+    
+    }
 
         console.log(`Usuario: ${JSON.stringify(usuario)}`)
         const hashed_password = usuario.Clave
         console.log(hashed_password)
-        console.log("mensaje "+message)
+        
 
         if(bcrypt.compareSync(req.body.Clave,
              hashed_password)){
@@ -53,8 +59,9 @@ function signIn(req, res) {
 
         }
         else {
+            console.log("mensaje "+res.status(404).send({message: `Usuario no encontrado`}))
             res.status(401).json({ message: `Email o Contraseña incorrectos`})
-            console.log("mensaje "+message)
+            
         } 
     }).catch(err=>
         console.log('catch ', err))
