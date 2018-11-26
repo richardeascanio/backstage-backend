@@ -60,7 +60,7 @@ function signIn(req, res) {
         }
         else {
             console.log("Email o contraseña mala")
-            res.status(401).json({ message: `B`})
+            return res.status(401).json({ message: `B`})
             
         } 
     }).catch(err=>
