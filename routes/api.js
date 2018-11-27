@@ -22,8 +22,11 @@ var administradores = require('../models/administradores');
 
     //eventos
 
-    eventos.methods(['get', 'post', 'delete']);
+    eventos.methods(['get', 'delete']);
     eventos.register(router, '/eventos');
+
+    router.post('/eventos', auth, controllerEvento.updateEvento)
+    router.put('/eventos/:_id', auth, controllerEvento.updateEvento)
 
     //locales
 

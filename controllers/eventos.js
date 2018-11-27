@@ -53,5 +53,6 @@ function saveEvento  (req,res){
 
 module.exports = {
     getEvento,
+    saveEvento,
     updateEvento
 }
