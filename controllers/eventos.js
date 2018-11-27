@@ -14,9 +14,9 @@ function getEvento(req,res){
 
 }
 
-function saveEvento  (req,res){
+function saveEvento(req,res){
 
-    let evento = new Eventos()
+    let evento = new evento()
     evento.Name = req.body.Name,
     evento.Productor = req.body.Productor,
     evento.Fecha = req.body.Fecha,
