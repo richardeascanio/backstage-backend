@@ -5,7 +5,6 @@ const router = express.Router();
 const controllerEvento = require('../controllers/eventos');
 const controllerLocal = require('../controllers/locales');    
 const controllerUsuario = require('../controllers/usuarios');
-const controllerAdministrador = require('../controllers/administradores');
 const controllerAuth = require('../controllers/userauth');
 const auth = require('../middlewares/auth')   
 
@@ -15,7 +14,6 @@ const auth = require('../middlewares/auth')
 var eventos = require('../models/eventos');
 var locales = require('../models/locales');
 var usuarios = require('../models/usuarios');
-var administradores = require('../models/administradores');
 
 
 //routes
@@ -30,21 +28,17 @@ var administradores = require('../models/administradores');
 
     //locales
 
-    locales.methods(['get', 'post', 'put', 'delete']);
+    locales.methods(['get', 'delete']);
     locales.register(router, '/locales');
+
+    router.post('/locales', auth, controllerLocal.saveLocal)
+    router.put('/locales/:_id', auth, controllerLocal.updateLocal)
 
     //usuarios
 
     usuarios.methods(['get', 'post', 'put', 'delete']);
     usuarios.register(router, '/usuarios');
 
-    //administradores 
-
-    administradores.methods(['get', 'post', 'put', 'delete']);
-    administradores.register(router, '/administradores');
-
-    router.put('/eventos/:_id', auth, controllerEvento.updateEvento)
-    
     //get by id
 
     //find by id eventos
@@ -59,17 +53,13 @@ var administradores = require('../models/administradores');
 
     router.get('/usuarios/:_id', controllerUsuario.getUsuario)
 
-    //find by id administradores
-
-    router.get('/administradores/:_id', controllerAdministrador.getAdministrador)
-
-    //prueba sesion
+    //Control de sesiones
 
     router.post('/signup',controllerAuth.signUp)
 
     router.post('/signin',controllerAuth.signIn)
     
-    router.get('/private', auth, controllerAuth.Prueba)
+    //router.get('/private', auth, controllerAuth.Prueba)
 
 //retorno router
 

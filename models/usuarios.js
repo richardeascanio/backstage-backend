@@ -13,6 +13,7 @@ const usuariosSchema = new mongoose.Schema({
     Username: {type: String, unique: true, lowercase: true},
     Clave: String,
     MiembroDesde: {type:Date, default: Date.now()},
+    Admin: Boolean,
     LastLogin: Date
 
 });
