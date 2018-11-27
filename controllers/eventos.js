@@ -16,20 +16,20 @@ function getEvento(req,res){
 
 function saveEvento(req,res){
 
-    let evento = new evento()
-    evento.Name = req.body.Name,
-    evento.Productor = req.body.Productor,
-    evento.Fecha = req.body.Fecha,
-    evento.Lugar = req.body.Lugar,
-    evento.Calificacion = req.body.Calificacion,
-    evento.Descripcion = req.body.Descripcion,
-    evento.Precio = req.body.Precio,
-    evento.Categoria = req.body.Categoria,
-    evento.Imagen = req.body.Imagen,
-    evento.Contador = req.body.Contador,
-    evento.Acumulador = req.body.Acumulador
+    let event = new evento()
+    event.Name = req.body.Name,
+    event.Productor = req.body.Productor,
+    event.Fecha = req.body.Fecha,
+    event.Lugar = req.body.Lugar,
+    event.Calificacion = req.body.Calificacion,
+    event.Descripcion = req.body.Descripcion,
+    event.Precio = req.body.Precio,
+    event.Categoria = req.body.Categoria,
+    event.Imagen = req.body.Imagen,
+    event.Contador = req.body.Contador,
+    event.Acumulador = req.body.Acumulador
 
-    evento.save((err,eventoStored)=>{
+    event.save((err,eventoStored)=>{
 
         if(err) return res.json({message: `Error al guardar: ${err}`})
 
