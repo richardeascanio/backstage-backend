@@ -54,7 +54,8 @@ function signIn(req, res) {
             token: service.createToken(usuario), 
             Name: usuario.Nombre,
             _id: usuario._id,
-            Imagen: usuario.Imagen
+            Imagen: usuario.Imagen,
+            Admin: usuario.Admin
 
             })
 
