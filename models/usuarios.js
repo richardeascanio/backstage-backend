@@ -12,6 +12,7 @@ const usuariosSchema = new mongoose.Schema({
     Correo: {type: String, unique: true, lowercase: true},
     Username: {type: String, unique: true, lowercase: true},
     Clave: String,
+    Imagen: String,
     MiembroDesde: {type:Date, default: Date.now()},
     Admin: Boolean,
     LastLogin: Date

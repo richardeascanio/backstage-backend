@@ -53,7 +53,8 @@ function signIn(req, res) {
             message: 'A',
             token: service.createToken(usuario), 
             Name: usuario.Nombre,
-            _id: usuario._id
+            _id: usuario._id,
+            Imagen: usuario.Imagen
 
             })
 
