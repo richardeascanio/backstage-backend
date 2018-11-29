@@ -12,6 +12,8 @@ function signUp(req,res){
     Apellido: req.body.Apellido,
     Correo: req.body.Correo,
     Telefono: req.body.Telefono,
+    Imagen: req.body.Imagen,
+    Admin: req.body.Admin
     })
     usuario.save((err) =>{
         if (err) res.status(500).send({message: `Error al crear el usuario: ${err}`+` usuario: ${usuario}`} )
